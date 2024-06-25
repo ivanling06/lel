@@ -1,0 +1,257 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link rel="icon" type="image/svg+xml" href="images/rolex.svg">
+        <style>
+            body {
+                background: url('./images/background.jpg') no-repeat center center fixed;
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+                color: #fff;
+            }
+
+            .navbar {
+                width: 100%;
+                background-color: black;
+                padding: 1rem 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+                flex-wrap: wrap;
+            }
+
+            .logo-container {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+            }
+
+            .navbar a {
+                color: gold;
+                text-decoration: none;
+                padding: 0.5rem 1rem;
+                margin: 0 0.5rem;
+                border-radius: 0.5rem;
+                transition: background-color 0.3s ease;
+            }
+
+            .navbar a:hover {
+                background-color: #555;
+            }
+
+            .navbar img {
+                cursor: pointer;
+                height: auto;
+                width: 90px;
+            }
+
+            .social-icons a {
+                font-size: 1.5rem;
+                margin: 0 0.2rem;
+                color: gold;
+            }
+
+            .wrapper {
+                background: rgba(0, 0, 0, 0.8);
+                padding: 2rem;
+                max-width: 576px;
+                width: 100%;
+                border-radius: .75rem;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                margin-top: 4rem;
+                color: #fff;
+            }
+
+            .fade-out {
+                opacity: 0;
+            }
+
+            .rating i {
+                color: gold;
+                font-size: 2rem;
+                cursor: pointer;
+            }
+
+            .btn-group {
+                display: flex;
+                grid-gap: .5rem;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .btn-group .btn {
+                padding: .75rem 1rem;
+                border-radius: .5rem;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                font-size: .875rem;
+                font-weight: 500;
+            }
+
+            .btn-group .btn.submit {
+                background: gold;
+                color: #000;
+            }
+
+            .btn-group .btn.submit:hover {
+                background: darkgoldenrod;
+            }
+
+            .btn-group .btn.cancel {
+                background: #000;
+                color: gold;
+            }
+
+            .btn-group .btn.cancel:hover {
+                background: #555;
+            }
+
+            .footer {
+                width: 100%;
+                background-color: #000;
+                color: gold;
+                text-align: center;
+                padding: 1rem 0;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+            }
+
+            @media screen and (max-width: 768px) {
+                .navbar {
+                    flex-direction: column;
+                    padding: 1rem;
+                }
+
+                .navbar a {
+                    padding: 0.5rem;
+                    margin: 0.5rem 0;
+                }
+
+                .logo-container img {
+                    width: 70px;
+                }
+
+                .wrapper {
+                    padding: 1.5rem;
+                    margin-top: 5rem; /* Adjusted margin-top for smaller screens */
+                }
+
+                .btn-group {
+                    flex-direction: column; /* Stack buttons vertically on smaller screens */
+                    width: 100%; /* Ensure full width for better touch targets */
+                }
+
+                .btn-group .btn {
+                    width: 100%; /* Ensure buttons take full width */
+                    padding: .75rem 1rem;
+                }
+            }
+
+            @media screen and (max-width: 480px) {
+                .navbar {
+                    flex-direction: column;
+                    padding: 1rem;
+                }
+
+                .navbar a {
+                    padding: 0.5rem;
+                    margin: 0.25rem 0;
+                }
+
+                .logo-container img {
+                    width: 70px;
+                }
+
+                .wrapper {
+                    padding: 1rem;
+                    margin-top: 5rem; /* Adjusted margin-top for smaller screens */
+                }
+
+                .btn-group .btn {
+                    padding: .5rem 1rem;
+                }
+
+                .social-icons {
+                    display: block; /* Ensure social icons are visible on small screens */
+                    text-align: center; /* Center align social icons */
+                    margin-top: 0.5rem; /* Add some margin for better spacing */
+                }
+
+                .social-icons span {
+                    display: none; /* Hide "Our Socials:" text on small screens */
+                }
+            }
+        </style>
+        <title>Rate Our Services</title>
+    </head>
+
+    <body class="fade-in">
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="form.html">Rate our Services</a>
+            <div class="logo-container">
+                <img src="./images/rolex.png" alt="Logo" onclick="window.location.href='index.html'">
+            </div>
+            <div class="social-icons">
+                <span>Our Socials:</span>
+                <a href="https://www.instagram.com/rolex/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/rolex/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <h3>Rate our services</h3>
+            <form action="feedback.html" id="rating-form">
+                <div class="rating">
+                    <input type="number" name="rating" hidden>
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+                <div class="btn-group">
+                    <button type="submit" class="btn submit">Submit</button>
+                    <a href="index.html" class="btn cancel">Cancel</a>
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            &copy; 2024 Rolex. All Rights Reserved.
+        </div>
+        <script src="script.js"></script>
+        <script>
+            window.addEventListener('load', () => {
+                document.body.classList.add('fade-in');
+            });
+
+            document.getElementById('rating-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    this.submit();
+                }, 500);
+            });
+        </script>
+    </body>
+
+    </html>
